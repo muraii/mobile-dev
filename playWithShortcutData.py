@@ -1,17 +1,3 @@
-for key in data_dict.keys():
-	'text',
-	'urls',
-	'web page'
-	]
-
-data_dict = dict(zip(keys, data))
-	'images',
-	'file paths',
-	'attachments',
-keys = [
-
-data.append(appex.get_web_page_info())
-data.append(appex.get_urls())
 import appex, console
 
 data = []
@@ -19,6 +5,20 @@ data.append(appex.get_attachments())
 data.append(appex.get_file_paths())
 data.append(appex.get_images())
 data.append(appex.get_text())
+data.append(appex.get_urls())
+data.append(appex.get_web_page_info())
+
+keys = [
+	'attachments',
+	'file paths',
+	'images',
+	'text',
+	'urls',
+	'web page'
+	]
+
+data_dict = dict(zip(keys, data))
+for key in data_dict.keys():
 	#print(key, type(data_dict[key]))
 	if type(data_dict[key]) == type(dict()):
 		for item in data_dict[key].keys():
@@ -33,3 +33,4 @@ data.append(appex.get_text())
 	#print(type(datum))
 	#console.alert("fart", str(type(datum)), "okay")
 	#console.alert("fart", str(len(datum), "okay"))
+
